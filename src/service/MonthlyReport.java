@@ -11,7 +11,6 @@ import java.nio.file.Path;
 
 public class MonthlyReport extends FileContent<MonthlyData> {
     List<MonthlyData> data = new ArrayList<>();
-    private String nameMonth;
     private int valueNameMonth;
 
     public MonthlyReport(Path path) {

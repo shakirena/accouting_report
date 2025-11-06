@@ -6,7 +6,6 @@ import model.YearlyData;
 
 import java.nio.file.Path;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class YearlyReport extends FileContent<YearlyData> {
     private List<YearlyData> data = new ArrayList<>();
