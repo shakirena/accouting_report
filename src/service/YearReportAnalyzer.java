@@ -4,7 +4,6 @@ import abstractions.FileContent;
 import abstractions.ReportAnalyzer;
 import model.MonthName;
 import model.YearlyData;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
