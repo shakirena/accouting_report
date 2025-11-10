@@ -7,10 +7,11 @@ import model.MonthName;
 import model.MonthlyData;
 
 /**
- *  Вывод Месячного отчета на консоль
+ * Вывод Месячного отчета на консоль
  */
-public class ReportMonthPrinter  implements ReportPrinter {
-    FileContent<MonthlyData> report ;
+public class ReportMonthPrinter implements ReportPrinter {
+    FileContent<MonthlyData> report;
+
     public ReportMonthPrinter(FileContent<MonthlyData> reportMonth) {
         report = reportMonth;
     }
@@ -18,7 +19,7 @@ public class ReportMonthPrinter  implements ReportPrinter {
     @Override
     public void print() {
         ReportAnalyzer analyzer = new MonthReportAnalyazer(report);
-        int month  = Integer.parseInt(String.valueOf(report.getNameFile()).substring(4,6));
+        int month = Integer.parseInt(String.valueOf(report.getNameFile()).substring(4, 6));
         System.out.println("месяц:" + MonthName.getMonthName(month));
         System.out.println("самый прибыльный товар: " + analyzer.getRentable());
         System.out.println("самый большой расход: " + analyzer.getCostly());

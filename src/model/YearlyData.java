@@ -1,6 +1,6 @@
 package model;
 
-public class YearlyData  extends AccountingData{
+public class YearlyData extends AccountingData {
     private int month;
 
 

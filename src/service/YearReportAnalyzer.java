@@ -3,7 +3,6 @@ package service;
 import abstractions.FileContent;
 import abstractions.ReportAnalyzer;
 import model.MonthName;
-import model.MonthlyData;
 import model.YearlyData;
 
 import java.util.ArrayList;
@@ -27,14 +26,14 @@ public class YearReportAnalyzer extends ReportAnalyzer {
 
     @Override
     public int getSumRentable() {
-        return data.stream().filter(i -> i.getIsExpense()==false).mapToInt(i -> i.getSum()).sum();
+        return data.stream().filter(i -> i.getIsExpense() == false).mapToInt(i -> i.getSum()).sum();
     }
 
     @Override
     public String getRentable() {
         return data.stream().filter(i -> i.getIsExpense() == false)
                 .max(Comparator.comparing(i -> i.getSum()))
-                .map( i -> i.getMonth() + ":" + i.getSum()).orElse("No data");
+                .map(i -> i.getMonth() + ":" + i.getSum()).orElse("No data");
 
     }
 
@@ -42,7 +41,7 @@ public class YearReportAnalyzer extends ReportAnalyzer {
     public String getCostly() {
         return data.stream().filter(i -> i.getIsExpense() == true)
                 .max(Comparator.comparing(i -> i.getSum()))
-                .map( i -> i.getMonth() + ":" + i.getSum()).orElse("No data");
+                .map(i -> i.getMonth() + ":" + i.getSum()).orElse("No data");
     }
 
     public Double getAveCosts() {

@@ -3,17 +3,17 @@ package service;
 import abstractions.FileContent;
 import abstractions.ReportAnalyzer;
 import model.MonthlyData;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class MonthReportAnalyazer  extends ReportAnalyzer {
+public class MonthReportAnalyazer extends ReportAnalyzer {
     List<MonthlyData> data = new ArrayList<>();
 
     public MonthReportAnalyazer(FileContent<MonthlyData> report) {
         this.data = report.getListofFiles();
     }
+
     @Override
     public int getSumCostly() {
 
@@ -38,6 +38,7 @@ public class MonthReportAnalyazer  extends ReportAnalyzer {
 
         return name;
     }
+
     @Override
     public String getCostly() {
 

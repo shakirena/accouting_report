@@ -1,13 +1,12 @@
 package service;
 
 import abstractions.FileContent;
-import abstractions.ReportAnalyzer;
 import api.ReportPrinter;
-import model.MonthlyData;
 import model.YearlyData;
 
 public class ReportYearPrinter implements ReportPrinter {
-    FileContent<YearlyData> report ;
+    FileContent<YearlyData> report;
+
     public ReportYearPrinter(FileContent<YearlyData> reportYear) {
         report = reportYear;
     }

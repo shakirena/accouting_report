@@ -3,9 +3,7 @@ package service;
 
 import abstractions.FileContent;
 import model.MonthlyData;
-
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.nio.file.Path;
 
@@ -22,10 +20,10 @@ public class MonthlyReport extends FileContent<MonthlyData> {
     }
 
 
-    public  List<MonthlyData> getListofFiles()
-    {
+    public List<MonthlyData> getListofFiles() {
         return data;
     }
+
     private void getNameFileFromFile() {
         String name = getPath().getFileName().toString();
         this.setNameFile(name.substring(2, 8));

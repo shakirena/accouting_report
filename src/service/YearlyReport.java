@@ -3,7 +3,6 @@ package service;
 
 import abstractions.FileContent;
 import model.YearlyData;
-
 import java.nio.file.Path;
 import java.util.*;
 
@@ -14,10 +13,11 @@ public class YearlyReport extends FileContent<YearlyData> {
         super(path);
         getNameFileFromFile();
     }
-    public  List<YearlyData> getListofFiles()
-    {
+
+    public List<YearlyData> getListofFiles() {
         return data;
     }
+
     private void getNameFileFromFile() {
         String name = getPath().getFileName().toString();
         this.setNameFile(name.substring(2, 6));
@@ -38,9 +38,6 @@ public class YearlyReport extends FileContent<YearlyData> {
             }
         }
     }
-
-
-
 
 
     public String getCostly() {

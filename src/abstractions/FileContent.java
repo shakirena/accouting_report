@@ -1,6 +1,6 @@
 package abstractions;
-import api.ReadFile;
 
+import api.ReadFile;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,7 +10,7 @@ import java.util.List;
  * @param <T>
  */
 public abstract class FileContent<T> implements ReadFile {
-    private Path file ;
+    private Path file;
     private String nameFile;
 
     public abstract void saveFromFileToModel();
@@ -18,22 +18,22 @@ public abstract class FileContent<T> implements ReadFile {
 
     public abstract List<T> getListofFiles();
 
-    public FileContent(Path path)
-    {
+    public FileContent(Path path) {
         file = path;
     }
 
-    public Path getPath()
-    {
+    public Path getPath() {
         return file;
     }
 
     public String getNameFile() {
         return this.nameFile;
     }
-    public void  setNameFile(String name) {
+
+    public void setNameFile(String name) {
         this.nameFile = name;
     }
+
     @Override
     public List<String> readFileContentsOrNull() {
         try {
@@ -44,7 +44,6 @@ public abstract class FileContent<T> implements ReadFile {
             return null;
         }
     }
-
 
 
 }

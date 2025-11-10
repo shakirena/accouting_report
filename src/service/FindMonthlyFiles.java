@@ -1,13 +1,12 @@
 package service;
 
 import abstractions.PatternFindFiles;
-
 import java.util.regex.Pattern;
 
 /**
  * Поиск Месячных отчетов
  * <p>
- *  Имена файлов соответствуют шаблону {@code m.YYYYmm.csv}
+ * Имена файлов соответствуют шаблону {@code m.YYYYmm.csv}
  */
 public class FindMonthlyFiles extends PatternFindFiles {
 

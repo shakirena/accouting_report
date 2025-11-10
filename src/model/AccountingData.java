@@ -1,6 +1,6 @@
 package model;
 
-public abstract class  AccountingData {
+public abstract class AccountingData {
 
     private boolean isExpense;
     private int sum;

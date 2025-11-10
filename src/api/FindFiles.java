@@ -10,9 +10,11 @@ import java.util.List;
  */
 public interface FindFiles {
 
-    /** Ищет файлы в директории
+    /**
+     * Ищет файлы в директории
+     *
      * @return коллекцию путей, если файлы найдены, иначе {@code emptyList},
-     *                          если указанная директория не существует
+     * если указанная директория не существует
      * @throws IOException, если ошибка чтения директории
      */
     public abstract List<Path> findInDirectory() throws IOException;

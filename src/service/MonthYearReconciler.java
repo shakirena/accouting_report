@@ -6,7 +6,6 @@ import api.ReportReconciler;
 import model.MonthName;
 import model.MonthlyData;
 import model.YearlyData;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +30,7 @@ public class MonthYearReconciler implements ReportReconciler {
                     .filter(e -> e.getKey().substring(0, 4).equals(entry.getKey()))
                     .forEach(e -> {
                         int month = Integer.parseInt(e.getKey().substring(4, 6));
-                        String keyNew = MonthName.getMonthName(month)+ " " + e.getKey().substring(0, 4);
+                        String keyNew = MonthName.getMonthName(month) + " " + e.getKey().substring(0, 4);
                         ReportAnalyzer analyzer = new MonthReportAnalyazer(e.getValue());
                         int monthlyCost = analyzer.getSumCostly();
 

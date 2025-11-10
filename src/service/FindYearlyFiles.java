@@ -1,6 +1,6 @@
 package service;
-import abstractions.PatternFindFiles;
 
+import abstractions.PatternFindFiles;
 import java.util.regex.Pattern;
 
 /**
@@ -8,9 +8,8 @@ import java.util.regex.Pattern;
  * <p>
  * Имена файлов соответствует шаблону {@code y.YYYY.csv}
  */
-public class FindYearlyFiles  extends PatternFindFiles {
-    public FindYearlyFiles(String path)
-    {
+public class FindYearlyFiles extends PatternFindFiles {
+    public FindYearlyFiles(String path) {
         super(path);
     }
 
