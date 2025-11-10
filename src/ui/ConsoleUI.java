@@ -1,5 +1,4 @@
 package ui;
-
 import abstractions.FileContent;
 import api.FindFiles;
 import api.ReportPrinter;
@@ -7,7 +6,6 @@ import api.ReportReconciler;
 import model.MonthlyData;
 import model.YearlyData;
 import service.*;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashMap;
